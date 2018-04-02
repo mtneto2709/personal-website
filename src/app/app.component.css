@@ -1,0 +1,44 @@
+.presentation{
+    color: #fff;
+}
+
+.img-circle{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.star-light{
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+.star-thin{
+    padding: 0;
+    border: none;
+    border-top: solid 1px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+.presentation-text{
+    font-size: 120%;
+}
+
+.jumbotron{
+    margin-bottom: 0px;
+}
+
+.margin{
+    margin-top: 40px;
+}
