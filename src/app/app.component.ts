@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmailService } from './services/email.service';
 
 @Component({
 	selector: 'app-root',
@@ -10,6 +11,10 @@ export class AppComponent {
 	contato: any = {};
 	carregando: boolean = false;
 	erroEmail: boolean = false;
+
+	constructor(
+		private emailService: EmailService
+	){}
 
 	downloadCV() {
 		window.open("./assets/docs/cv.pdf")
@@ -24,6 +29,9 @@ export class AppComponent {
 	}
 
 	enviarEmail(contato:any){
-		
+		this.emailService.enviarEmail(contato).subscribe(
+			(data)=>{},
+			(err)=>{}
+		);
 	}
 }
