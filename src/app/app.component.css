@@ -42,3 +42,19 @@
 .margin{
     margin-top: 40px;
 }
+
+.icon-margin{
+    margin-right: 17px;
+}
+
+li:hover{
+    background-color: rgba(220, 220, 220);
+}
+
+.title{
+    color: white;
+}
+
+.input-group-text{
+    color: rgba(40, 40, 40);
+}

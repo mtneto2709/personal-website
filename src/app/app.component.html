@@ -68,17 +68,52 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md">
+				<h3 class="title" style="margin-top: 50px" >Me econtre nas redes sociais</h3>
 				<ul class="list-group">
+					<li (click)="openEmail()" class="list-group-item">
+						<i class="fa fa-envelope icon-margin"></i>messiaslima.03@gmail.com
+					</li>
 					<li class="list-group-item">
-						<i class="fa fa-envelope"></i>messiaslima.03@gmail.com</li>
-					<li class="list-group-item">Telefone</li>
-					<li class="list-group-item">Linked In</li>
-					<li class="list-group-item">Site</li>
-					<li class="list-group-item">Github</li>
-					<li class="list-group-item">Twitter</li>
+						<i class="fa fa-phone icon-margin"></i>+55 85 9 98516-852
+					</li>
+					<li (click)="openLink('http://linkedin.com/in/messias-lima')" class="list-group-item">
+						<i class="fab fa-linkedin icon-margin"></i>linkedin.com/in/messias-lima
+					</li>
+					<li (click)="openLink('http://messiaslima.github.io')" class="list-group-item">
+						<i class="fa fa-globe icon-margin"></i>messiaslima.github.io
+					</li>
+					<li (click)="openLink('http://github.com/MessiasLima')" class="list-group-item">
+						<i class="fab fa-github icon-margin"></i>github.com/MessiasLima
+					</li>
+					<li (click)="openLink('http://twitter.com/MessiasJunior_')" class="list-group-item">
+						<i class="fab fa-twitter icon-margin"></i> twitter.com/MessiasJunior_
+					</li>
 				</ul>
 			</div>
-			<div class="col-md"></div>
+			<div class="col-md title">
+				<h3 style="margin-top: 50px">... ou me envie um e-mail</h3>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Nome</span>
+					</div>
+					<input required [(ngModel)]="contato.nome" type="text" class="form-control" id="input-nome" placeholder="Digite seu nome">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">E-mail</span>
+					</div>
+					<input [(ngModel)]="contato.email" required type="email" class="form-control" id="input-email" placeholder="Digite seu email">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Mensagem</span>
+					</div>
+					<textarea [(ngModel)]="contato.mensagem" type="email" class="form-control" id="input-email" placeholder="Digite aqui sua mensagem"></textarea>
+				</div>
+				<button (click)="enviarEmail(contato)" type="button" class="btn btn-lg">Enviar
+					<i class="fa fa-paper-plane"></i>
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
